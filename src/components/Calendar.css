@@ -1,0 +1,123 @@
+.calendar-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.calendar-container {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+:global(.rbc-calendar) {
+  font-family: inherit;
+}
+
+:global(.rbc-header) {
+  padding: 12px 4px;
+  font-weight: 600;
+  color: #667eea;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+:global(.rbc-today) {
+  background-color: #f0f4ff;
+}
+
+:global(.rbc-off-range-bg) {
+  background-color: #fafafa;
+}
+
+:global(.rbc-event) {
+  padding: 4px 6px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+:global(.rbc-event:hover) {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+:global(.rbc-day-cell),
+:global(.rbc-time-slot) {
+  cursor: pointer;
+}
+
+:global(.rbc-day-cell:hover),
+:global(.rbc-time-slot:hover) {
+  background-color: #f5f7ff;
+}
+
+:global(.rbc-toolbar) {
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+:global(.rbc-toolbar button) {
+  outline: none;
+  border: 1px solid #e0e0e0;
+  padding: 8px 12px;
+  margin: 0 2px;
+  background: white;
+  color: #666;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+:global(.rbc-toolbar button:hover),
+:global(.rbc-toolbar button.rbc-active) {
+  background-color: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+:global(.rbc-toolbar label) {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .calendar-container {
+    padding: 1rem;
+  }
+
+  :global(.rbc-toolbar) {
+    flex-direction: column;
+  }
+
+  :global(.rbc-toolbar button) {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  :global(.rbc-header) {
+    padding: 8px 2px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-container {
+    padding: 0.75rem;
+  }
+
+  :global(.rbc-header) {
+    padding: 6px 1px;
+    font-size: 0.75rem;
+  }
+
+  :global(.rbc-event) {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,12 @@
+.calendar-container-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .calendar-container-wrapper {
+    height: auto;
+  }
+}
